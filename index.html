@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>City Texture in Manhattan Island and Amsterdam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="stylesheet" href="./lib/scrollmap.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Niconne&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="content">
+        <!--title block, background image is title image-->
+        <div class="row" style="background-image:url(img/title.jpg)">
+            <div class="center title">
+                <!--title text-->
+                <h1>City Texture in Manhattan Island and Amsterdam</h1>
+                <!--subtitle or author-->
+                <p class="author"><b>Gengkui Liu</b></p>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p>I am always fascinated by the texture of a city: the highways, rails, streets and avenues are woven to build a huge network. This network is the lifeblood of the city, and it transports people and stories through the history.</p>
+            </div>
+        </div>
+        <!--image block-->
+        <div class="row">
+            <div class="center">
+                <img class="fit" src="img/board.png">
+                <p align="justify">Different cities have different styles in the road network planning. The first map from the left shows roads in Beijing, China. The roads are <b><font color="#601f1b">concentric and right-angled</font></b>. In the middle is the roads in Moscow, Russia. <b><font color="#601f1b">Concentric and circular</font></b>. The last map shows roads in Mumbai, India. The roads develop <b><font color="#601f1b">organically along the coast</font></b>.</p>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p>This difference in the city's texture makes me wonder: why the roads look like what they are?</p>
+            </div>
+        </div>
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <!--data-slide property used to specify when the background should first-->
+                <img src="img/NYCAM.PNG" data-slide="0" class="fit vert-center">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin">Maybe I can compare <b><font color="#601f1b">New York County</font></b> in the U.S, and <b><font color="#601f1b">Amsterdam</font></b> in Netherlands, and hopefully figure out why the road networks look as they are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center" align="justify">New York County on Manhattan Island has area of 87.0 km<sup>2</sup>. The most distinctive feature on Manhattan Island is the <b><font color="#601f1b">grid system that was planned in 1811</font></b>. 
+                    This grid system described the earliest look of the roads on Manhattan Island: <b><font color="#601f1b">Avenues are parallel to the shorelines; streets are perpendicular to the avenues</font></b>.
+                    The avenues tilt to the northeast, with a deviation from true north to 29 degrees. 
+ 
+                </p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/manhattan.png">
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p><blockquote><em>"The Grid defines a new balance between control and de-control in which the city can be at the same time ordered and fluid, a metropolis of rigid chaos."</em></blockquote></p>
+                <br> —— Rem Koolhaas, 1978
+            </div>
+        </div>
+        <!--bootstrap carousel, centered-->
+        <div class="row">
+            <div class="center-wide">
+                <p>This is how roads look like in New York City. Streets and avenues are too long to see the end. The city is segmented by skyscrapers. And skyscrappers are surrounded by cars, buses, and trains.</p>
+                <!--slideshow of images, also known as a carousel-->
+                <!--remove "carousel-dark" if you want a lighter version of the carousel-->
+                <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!--indicator buttons at the bottom of the carousel that show the total number of slides-->
+                    <div class="carousel-indicators">
+                        <!--there should be as many of these buttons as there are slides in your carousel-->
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        
+                    </div>
+                    <!--images in the carousel-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slide1.jpg" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide2.jpg" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide3.jpg" class="w-100" alt="...">
+                        </div>
+                        
+                    </div>
+                    <!--previous/next buttons that allow users to click from one slide to the next-->
+                    <button id="prev-button" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="next-button" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p class="vert-center" align="justify">
+                <br><br>There are three reasons why roads on Manhattan Island looks like a grid:
+                <br><br>&#8226; This right-angeled road network aligns well with this narrow, rectangular shape of the island. People would feel <b><font color="#601f1b">easy to navigate</font></b> through the city. 
+                <br><br>&#8226; The distances between blocks are roughly the same, which allow pedestrains to <b><font color="#601f1b">calculate travel time</font></b> with simple rules of thumb: twenty blocks to a mile, one block a minute.
+                <br><br>&#8226; Places are connected by straight roads, which <b><font color="#601f1b">saves time and money</font></b> to build.             </div>
+                </p>
+            </div>
+        </div>
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <!--data-slide property used to specify when the background should first-->
+                <img src="img/alignment.png" data-slide="0" class="fit vert-center">
+                <img src="img/blocks.jpg" data-slide="1" class="fit vert-center hidden">
+                <img src="img/straightconnection.jpg" data-slide="2" class="fit vert-center hidden">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="center background-transparent rounded">
+                        <p class="no-margin" align="justify">This right-angeled road network aligns well with this narrow, rectangular shape of the island. People would feel <b><font color="#601f1b">easy to navigate</font></b> through the city. </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin" align="justify">The distances between blocks are roughly the same, which allow pedestrains to <b><font color="#601f1b">calculate travel time</font></b> with simple rules of thumb: twenty blocks to a mile, one block a minute.
+                        If we walked from 80th street to 90th street, we would pass by 10 blocks, and the estimated distance is 0.5 miles
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin" align="justify">This grid system was designated to connect places by straight roads, so the distance between two places would be the shortest. This actually<b><font color="#601f1b"> saved time and money</font></b> for builders to construct the roads. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p><blockquote><em>"Manhattan has no
+                    center … If you asked a New Yorker for directions to ‘the center of town,’ he would be bewildered."</em></blockquote></p>
+                <br> —— James Traub, 2011
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center" align="justify">Many European cities may have concentric, radiant road network system around the city center. 
+                    But this type of road network may not be suitable for Manhattan. 
+                    This is because Manhattan can have multiple "city centers". Visitors may think Time Square is the city center; traders may feel the Wall Street is the city center.
+                    If a concentric and radiant road system was implemented rather than the grid system, there might be huge congestions and passengers might easily get lost.
+ 
+                </p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/citycenter.jpg">
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center" align="justify">
+                    Amsterdam is a unique port city in the Netherlands.
+                    With more than 26% of Dutch territory lies <b><font color="#601f1b">below the sea level</font></b>, Amsterdam serves as a great example of <b><font color="#601f1b">flood management</font></b>.
+                    A full <b><font color="#601f1b">25%</font></b> of the city's surface still consists of navigable waterways. 
+                    With <b><font color="#601f1b">65</font></b> miles of ancient canals, Amsterdam is still the most watery city in the world. 
+                    And the road network planning in this city is deeply affected by the water management.
+                </p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/amsterdam.png">
+            </div>
+        </div>
+        <!--bootstrap carousel, centered-->
+        <div class="row">
+            <div class="center-wide">
+                <p>This is how roads look like in Amsterdam.
+                    You can rarely find a long straight road here; the majority of roads are curved along the canals and pretty narrow.
+                    Very friendly to cyclists, but not convenient for drivers —— at least in downtown Amsterdam.
+                </p>
+                <!--slideshow of images, also known as a carousel-->
+                <!--remove "carousel-dark" if you want a lighter version of the carousel-->
+                <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!--indicator buttons at the bottom of the carousel that show the total number of slides-->
+                    <div class="carousel-indicators">
+                        <!--there should be as many of these buttons as there are slides in your carousel-->
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        
+                    </div>
+                    <!--images in the carousel-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/amsterdam1.PNG" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/amsterdam2.jpg" class="w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/amsterdam3.jpg" class="w-100" alt="...">
+                        </div>
+                        
+                    </div>
+                    <!--previous/next buttons that allow users to click from one slide to the next-->
+                    <button id="prev-button" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button id="next-button" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--text block-->
+        <div class="row">
+            <div class="center">
+                <p class="vert-center" align="justify">
+                <br><br>There are three reasons why roads in Amsterdam looks like concentric circles:
+                <br><br>&#8226; The roads have to align with the concentric canals in the city for <b><font color="#601f1b">flood management purpose</font></b>. 
+                <br><br>&#8226; Residents and merchants living along the concentric roads could <b><font color="#601f1b">effectively receive goods</font></b> from the city center.
+                <br><br>&#8226; Concentric roads can <b><font color="#601f1b">relief the traffic</font></b>.
+                </p>
+            </div>
+        </div>
+        <!--background images with text scrolling over them-->
+        <div class="scroll-container">    
+            <!--background images-->
+            <div class="background-item">
+                <!--data-slide property used to specify when the background should first-->
+                <img src="img/fan.jpg" data-slide="0" class="fit vert-center">
+                <img src="img/fan.jpg" data-slide="1" class="fit vert-center hidden">
+                <img src="img/ringroad.jpg" data-slide="2" class="fit vert-center hidden">
+            </div>
+            <!--foreground text blocks-->
+            <div class="foreground-item no-event">
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin" align="justify">
+                            The Hollands have been building a lot of <b><font color="#601f1b">canals</font></b> to <b><font color="#601f1b">remove excess water</font></b> during the flood, and to pump in sea water to <b><font color="#601f1b">clean the waterways</font></b>.
+                            These canals were constructed in a <b><font color="#601f1b">concentric circles</font></b> layout around the center of Amsterdam.
+                            Some <b><font color="#601f1b">radiating</font></b> canals interconnected with the concentric canals to form a fan shape. 
+                            Water can easily circulate through the city in these circular waterways.
+                            The road network, as a result, has to <b><font color="#601f1b">align with the canal layout</font></b>. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded">
+                        <p class="no-margin" align="justify">
+                            In addition, as a major port city, Amsterdam receives huge quantities of trading goods from the world every day.
+                            The concentric and radiating roads (and canals of course) can <b><font color="#601f1b">efficiently transport and distribute goods</font></b> from the city center to the residents everywhere in the city. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left background-transparent rounded" align="justify">
+                        <p class="no-margin">From the traffic perspective, the concentric ring roads around the center of Amsterdam is an alternate route for vehicles (cars, bycicles, etc.) that do not need to stop in the city core. This road network design help <b><font color="#601f1b">relief the congestion</font></b> in downtown Amsterdam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--side-by-side image and text block-->
+        <div class="row">
+            <div class="left">
+                <p class="vert-center" align="justify">
+                    The Dutch government once attempted to transform Amsterdam into a car-centric metropolis just like New York City.
+                    This attempt is called Plan Jokinen. 
+                    It planned to fill in canals and build highways and parking areas, and these highways and parking areas would grab space from the surrounding neighborhoods.
+                    In the plan, these highways would connect high office towers in downtown Amsterdam with suburban areas, so residents can drive to work in downtown.
+                    However, Plan Jokinen failed. Mainly because the <b><font color="#601f1b">oil crisis in 1970s forced the Dutch government to save gas</font></b>. 
+                    In addition, <b><font color="#601f1b">a lot of children lost their lives in car accidents</font></b>, and their parents put fierce protests to stop this plan.
+                </p>
+            </div>
+            <div class="right">
+                <img class="fit" src="img/plan.PNG">
+            </div>
+        </div>
+        <!--mapbox iframe-->
+        <div class="row sm-margin">
+            <div class="center-wide">
+                <p>Play around the full map.</p>
+                <iframe width='100%' height='800px' src="https://api.mapbox.com/styles/v1/gengkuiliu/clbhb9mmh000p15taiyfdd4td.html?title=false&access_token=pk.eyJ1IjoiZ2VuZ2t1aWxpdSIsImEiOiJja3p0NTVidDYwYzQwMnVtaGtuY3pqcWxkIn0.2qWDnf-OPOC_ZDKzedKlkQ&zoomwheel=false#11.45/52.3753/4.8785" title="CityTexture" style="border:none;"></iframe>            </div>
+        </div>
+        <!--text block-->
+        <div class="row no-margin">
+            <div class="center">
+                <div class="credits">
+                    <hr>
+                    <p><b>Credits:</b></p>
+                    <p>Map created with Mapbox Studio</p>
+                    <p>Data from openstreetmap</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="./lib/scrollmap.js"></script>
+<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+
+</body>
+</html>
